@@ -11,6 +11,12 @@
 
 AWS RDS를 사용하여 관리한다.
 
+Docker build --tag [아이디/image 이름] .   
+
+명령어를 통해 image 를 생성할 수 있으며  
+
+Docker push [아이디/image 이름] 를 통해 docker hub에 업로드가 가능하다. 
+
 
 ## streaming : Video 정보 관리 backend 
 
@@ -20,6 +26,12 @@ AWS RDS를 사용하여 관리한다.
 /video/list, /video/{vidoeTitle} 명령어 기능을 사용할 수 있다.
 
 mongoDB를 사용하여 관리한다.
+
+Docker build --tag [아이디/image 이름] .   
+
+명령어를 통해 image 를 생성할 수 있으며  
+
+Docker push [아이디/image 이름] 를 통해 docker hub에 업로드가 가능하다. 
 
 
 ## todo-react-app :  frontend
@@ -32,13 +44,20 @@ react build 파일을 nginx에서 사용하는 방식으로 nginx의 reverse pro
 
 [주소]/video >> video backend
 
+Docker build --tag [아이디/image 이름] .   
+
+명령어를 통해 image 를 생성할 수 있으며  
+
+Docker push [아이디/image 이름] 를 통해 docker hub에 업로드가 가능하다. 
 
 ## deployment , service yaml 파일
 
-k8s 안에서 사용하는 yaml파일로 frontend, backend 1,2 들을 수행하는 pod를 생성하는 deployment yaml 파일과 서비스 디스커버리를 수행하는 service yaml 파일들로
+k8s 안에서 사용하는 yaml파일로 frontend, backend 1,2 들을 수행하는 pod를 생성하는 deployment yaml 파일과 서비스 디스커버리를 수행하는 service yaml 파일들이다. 
 
-kubectl create -f [파일이름] 을 통해 사용할 수 있다.
+Docker pull [아이디/image 이름] 
 
-쿠버네티스 상에서 사용하기 위한 도커파일들이 각각의 폴더에 내장되어있어 각각의 폴더를 build한 후 
+해당 명령어를 통해 docker hub에서 pull 기능을 이용해 쿠버네티스의 마스터노드에 image를 받아온 이후 
 
-docker build 명령어를 통해 docker image 를 제작한 후 docker hub에 push/pull 기능을 이용해 쿠버네티스의 마스터노드에서 받아온 image를 사용하여 deployment , service를 생성 할 수 있다.
+kubectl create -f [파일이름] 명령어를 통해 deployement , service를 생성할 수 있다. 
+
+ 
