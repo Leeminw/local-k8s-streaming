@@ -58,6 +58,8 @@ Docker pull [아이디/image 이름]
 
 해당 명령어를 통해 docker hub에서 pull 기능을 이용해 쿠버네티스의 마스터노드에 image를 받아온 이후 
 
-kubectl create -f [파일이름] 명령어를 통해 deployement , service를 생성할 수 있다. 
+kubectl create -f [파일이름] 
+
+명령어를 통해 deployement , service를 생성할 수 있다. 
 
  
