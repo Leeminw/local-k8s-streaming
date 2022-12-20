@@ -29,6 +29,7 @@ mongoDB를 사용하여 관리한다.
 react build 파일을 nginx에서 사용하는 방식으로 nginx의 reverse proxy를 사용하여 요청에 따라 두가지 backend에 API요청을한다.
 
 [주소]/auth >> flask backend
+
 [주소]/video >> video backend
 
 
