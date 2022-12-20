@@ -40,6 +40,4 @@ kubectl create -f [파일이름] 을 통해 사용할 수 있다.
 
 쿠버네티스 상에서 사용하기 위한 도커파일들이 각각의 폴더에 내장되어있어 각각의 폴더를 build한 후 
 
-docker build 명령어를 통해 docker image 를 제작한 후 docker hub에 push/pull 기능을 이용해 쿠버네티스의 마스터노드에서 받아온 image를 사용하여 deployment , service를 생성
-
-할 수 있다.
+docker build 명령어를 통해 docker image 를 제작한 후 docker hub에 push/pull 기능을 이용해 쿠버네티스의 마스터노드에서 받아온 image를 사용하여 deployment , service를 생성 할 수 있다.
